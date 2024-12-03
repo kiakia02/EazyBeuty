@@ -1,0 +1,244 @@
+/* Reset default browser styling untuk memastikan konsistensi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Mengatur agar padding tidak menambah ukuran elemen */
+    font-family: Arial, sans-serif; /* Font default untuk halaman */
+}
+
+body {
+    background-color: #f8e9e9; /* Warna latar belakang halaman */
+    height: 100vh; /* Tinggi halaman sesuai viewport */
+    display: flex; /* Menggunakan flexbox untuk menempatkan elemen utama */
+    align-items: center; /* Memposisikan elemen di tengah vertikal */
+    justify-content: center; /* Memposisikan elemen di tengah horizontal */
+}
+
+/* Kontainer utama yang mencakup dua sisi */
+.container {
+    display: flex; /* Flexbox untuk membagi kontainer menjadi dua kolom */
+    width: 70%; /* Lebar kontainer 80% dari lebar layar */
+    max-width: 1200px; /* Maksimal lebar kontainer */
+    background-color: white; /* Warna putih untuk latar belakang kontainer */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek mengambang */
+    border-radius: 10px; /* Sudut kontainer melengkung */
+    overflow: hidden; /* Konten di luar radius akan tersembunyi */
+    height: 90%;
+}
+
+/* Bagian kiri */
+.left-section {
+    flex: 1; /* Mengambil separuh ruang kontainer */
+    padding: 40px; /* Ruang di dalam bagian kiri */
+    display: flex; /* Flexbox untuk tata letak vertikal */
+    flex-direction: column; /* Kolom vertikal */
+    justify-content: center; /* Memusatkan konten secara vertikal */
+    align-items: center; /* Memusatkan konten secara horizontal */
+    text-align: center; /* Teks rata tengah */
+    margin-right: 20px;
+}
+
+.left-section .illustration {
+    width: 100%; /* Gambar akan menyesuaikan dengan lebar area */
+    max-width: 200px; /* Lebar maksimum gambar */
+    margin-bottom: 20px; /* Jarak antara gambar dan teks berikutnya */
+}
+
+img {
+    margin-left: -114px; 
+    width: 480px;
+    height: 650px;
+    border-radius: 5px;
+}
+
+.left-section .text h2 {
+    font-size: 24px; /* Ukuran font untuk judul */
+    margin-bottom: 10px; /* Jarak dengan teks berikutnya */
+    color: #444; /* Warna teks abu-abu gelap */
+}
+
+.left-section .text p {
+    font-size: 14px; /* Ukuran font untuk deskripsi */
+    color: #555; /* Warna teks abu-abu */
+}
+
+h1 {
+    text-align: center;
+    font-family: Carroline Typography;
+    margin-left: 30px;
+    color: #f26b8a;
+}
+
+a {
+    font-size: 13px;
+}
+
+.uname {
+    margin-top: 15px;
+}
+
+/* Bagian kanan */
+.right-section {
+    flex: 1; /* Mengambil separuh ruang kontainer */
+    padding: 40px; /* Ruang di dalam bagian kanan */
+    display: flex; /* Flexbox untuk tata letak vertikal */
+    flex-direction: column; /* Kolom vertikal */
+    justify-content: center; /* Memusatkan konten secara vertikal */
+    align-items: flex-start; /* Konten rata kiri */
+    margin-left: 20px;
+}
+
+.right-section h1 {
+    font-size: 24px; /* Ukuran font untuk judul */
+    margin-bottom: 20px; /* Jarak dengan elemen berikutnya */
+}
+
+/* Styling form */
+/* form {
+    width: 100%; 
+} */
+.form {
+    width: 100%;
+}
+
+label {
+    display: block;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    font-size: 14px;
+}
+
+/* Tombol login */
+.btn {
+    background-color: #f3a4b6; /* Warna tombol utama */
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+/* Efek hover untuk tombol login */
+.btn:hover {
+    background-color: #e0728c; /* Warna biru lebih gelap saat hover */
+}
+
+/* Opsi tambahan seperti lupa password */
+.options {
+    margin: 20px 0; /* Jarak vertikal atas dan bawah */
+    text-align: center; /* Teks rata tengah */
+}
+
+/* Tombol Google login */
+.google-btn {
+    background-color: #f9dde4; /* Warna tombol utama */
+    color: #666;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Efek hover untuk tombol Google login */
+.google-btn:hover {
+    background-color: #ecc5ce; /* Latar belakang abu-abu muda saat hover */
+}
+
+/* Teks di bawah form */
+p {
+    font-size: 14px; /* Ukuran font */
+    margin-top: 20px; /* Jarak dengan elemen di atas */
+    color: #666; /* Warna abu-abu */
+}
+
+.Forgot {
+    color: #f26b8a; /* Warna biru untuk tautan */
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+}
+
+p a {
+    color: #f26b8a; /* Warna biru untuk tautan */
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+}
+
+.sign-in {
+    text-decoration: none;
+}
+
+/* Media queries untuk layar tablet (maksimal 768px) */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Mengatur kontainer menjadi vertikal */
+        width: 90%; /* Lebar kontainer menjadi 90% dari layar */
+        height: auto; /* Tinggi otomatis untuk menyesuaikan konten */
+    }
+
+    .left-section,
+    .right-section {
+        flex: none; /* Reset flex */
+        width: 100%; /* Lebar penuh untuk setiap bagian */
+        padding: 20px; /* Padding lebih kecil */
+        text-align: center; /* Teks rata tengah */
+    }
+
+    .left-section .illustration img {
+        max-width: 300px; /* Kurangi ukuran gambar */
+        height: auto; /* Otomatis menyesuaikan tinggi */
+        margin: 0 auto; /* Gambar berada di tengah */
+    }
+
+    .right-section {
+        align-items: center; /* Form rata tengah */
+    }
+
+    form {
+        width: 100%; /* Lebar penuh untuk form */
+        max-width: 400px; /* Maksimal lebar form */
+    }
+}
+
+/* Media queries untuk layar ponsel kecil (maksimal 480px) */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100%; /* Lebar kontainer menjadi 100% dari layar */
+        padding: 10px; /* Tambahkan padding di sekitar kontainer */
+    }
+
+    .left-section .illustration img {
+        max-width: 250px; /* Ukuran gambar lebih kecil */
+    }
+
+    .btn,
+    .google-btn {
+        padding: 12px; /* Kurangi padding tombol */
+        font-size: 14px; /* Ukuran font lebih kecil */
+    }
+
+    input {
+        padding: 10px; /* Kurangi padding input */
+        font-size: 14px; /* Ukuran font lebih kecil */
+    }
+
+    p {
+        font-size: 12px; /* Kurangi ukuran font */
+    }
+}

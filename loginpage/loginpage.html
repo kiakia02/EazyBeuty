@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eazy Beuty Login</title>
+    <!-- Menghubungkan file CSS eksternal -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"> <!-- logo google-->
+</head>
+<body>
+    <!-- Kontainer utama yang mencakup kedua sisi (kiri dan kanan) -->
+    <div class="container">
+        <!-- Bagian kiri dengan ilustrasi dan teks -->
+        <div class="left-section">
+            <div class="illustration">
+                <img src="img/login2.jpg" alt="Eazy Beuty">
+            </div>
+        </div>
+
+        <!-- Bagian kanan dengan form login -->
+        <div class="right-section">
+            <!-- Judul halaman login -->
+             <div>
+            <h1 style="text-align: center; font-size: 27px;" >Welcome to Eazy Beuty</h1>
+            <hr style="width: 350px; margin-right: 0;">
+            </div>
+            <!-- Form login -->
+            <form method="get" action="../Dashbord/dashbord.html" target="_blank">
+                <!-- Label dan input untuk username/email -->
+                <label for="username" class="uname">Email</label>
+                <input type="text" class="username" placeholder="Enter Email" required>
+
+                <!-- Label dan input untuk password -->
+                <label for="password" class="password">Password</label>
+                <input type="password" class="password" placeholder="Enter Password" required>
+                <a href="file:///C:/Users/Lenovo/OneDrive/Website%20Eazy%20Beuty/forgotpass/forgotpassword.html#" class="Forgot" target="_blank">Forgot password?</a>
+                <!-- Tombol untuk login -->
+                <button type="submit" class="btn">Sign in</button >
+                <!-- Opsi tambahan seperti lupa password atau login dengan Google -->
+                <div class="options">
+                    <span class="or">or</span>
+                    
+                    <button type="button" class="google-btn">
+                        <i class="fab fa-google"></i>  <!-- Logo Google--> Sign in with Google</button>
+                </div>
+                <!-- Tautan untuk membuat akun baru -->
+                <p>Don't have an account? <a href="file:///C:/Users/Lenovo/OneDrive/Website%20Eazy%20Beuty/CreateAcc/create.html#" target="_blank">Create Account</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

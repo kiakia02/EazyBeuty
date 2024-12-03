@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eazy Beauty Web</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="max-width">
+        <div class="logo">
+            <a href="#">Eazy Beauty</a>
+        </div>
+        <ul class="menus">
+            <li><a href="file:///C:/Users/Lenovo/OneDrive/Website%20Eazy%20Beuty/Dashbord/dashbord.html">Home</a></li>
+            <li><a href="file:///C:/Users/Lenovo/OneDrive/Website%20Eazy%20Beuty/Tipe%20Kulit/tipekulit.html#">Tipe Kulit</a></li>
+            <li><a href="=#about">About Us</a></li>
+            <li><a href="=#contact">Contact Us</a></li>
+            <li><a href="=#review">Review</a></li>
+        </ul>
+
+        <div class="search-bar">
+            <input type="search" placeholder="Search">
+            <label for="icon" class="icon">
+                <span class="fas fa-search"></span>
+            </label>
+        </div>
+    </div>
+    </nav>
+
+    <section class="background-container">
+        <div class="bg">
+            <h1>Eazy Beauty</h1>
+        </div>
+    </section>
+    <div class="bgimg">
+    <div class="background-image"></div>
+        <section id="tipe-kulit" class="content">
+            <div class="row">
+                <div class="card">
+                    <h3>Kulit Kering</h3>
+                    <button class="button" onclick="showDescription('kering')">Pelajari Lebih Lanjut</button>
+                </div>
+                <div class="card">
+                    <h3>Kulit Normal</h3>
+                    <button class="button" onclick="showDescription('normal')">Pelajari Lebih Lanjut</button>
+                </div>
+                <div class="card">
+                    <h3>Kulit Kombinasi</h3>
+                    <button class="button" onclick="showDescription('kombinasi')">Pelajari Lebih Lanjut</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card">
+                    <h3>Kulit Berminyak</h3>
+                    <button class="button" onclick="showDescription('berminyak')">Pelajari Lebih Lanjut</button>
+                </div>
+                <div class="card">
+                    <h3>Kulit Sensitif</h3>
+                    <button class="button" onclick="showDescription('sensitif')">Pelajari Lebih Lanjut</button>
+                </div>
+            </div>
+        </section>
+        </div>
+
+    <script>
+        function showDescription(type) {
+    let description;
+    switch (type) {
+        case 'kering':
+            description = `
+                <p>Kulit kering memiliki karakteristik seperti terasa kencang atau kering, terutama setelah mandi atau berenang. 
+                Biasanya kulit terlihat kusam, kasar, dan pucat dengan pori-pori yang hampir tidak terlihat, serta sering 
+                muncul guratan halus di permukaan kulit.</p>`;
+            break;
+        case 'berminyak':
+            description = `
+                <p>Kulit berminyak dicirikan oleh produksi minyak berlebih sehingga kulit terasa berminyak dan berlemak. 
+                Area tertentu seperti hidung dan kening cenderung terlihat mengilap, pori-pori besar dan mudah tersumbat, 
+                sehingga rentan terhadap jerawat atau komedo.</p>`;
+            break;
+        case 'kombinasi':
+            description = `
+                <p>Kulit kombinasi memiliki area berminyak di bagian kening, hidung, dan dagu (T-zone), sementara pipi dan 
+                area lainnya terasa normal atau kering. Kondisi ini membuat pori-pori di beberapa area terlihat lebih besar 
+                dibandingkan area lain.</p>`;
+            break;
+        case 'normal':
+            description = `
+               <p> Kulit normal adalah kondisi kulit yang ideal dengan karakteristik seperti minimnya noda di wajah, tidak ada 
+                sensitivitas yang berlebihan, dan pori-pori yang tidak terlalu terlihat. Kulit jenis ini umumnya tampak sehat 
+                dan seimbang.</p>`;
+            break;
+        case 'sensitif':
+            description = `
+                <p>Kulit sensitif mudah mengalami iritasi dan sering menunjukkan reaksi seperti kemerahan, gatal, atau rasa 
+                terbakar ketika bersentuhan dengan produk atau bahan tertentu. Kulit jenis ini memerlukan perhatian dan 
+                perawatan ekstra dengan produk yang lembut.</p>`;
+            break;
+        default:
+            description = 'Informasi tidak tersedia.';
+            break;
+    }
+    showPopup(description);
+}
+
+        function showPopup(description) {
+            const popup = document.createElement('div');
+            popup.classList.add('popup');   
+            popup.innerHTML = `
+                <h2>Informasi Tipe Kulit</h2>
+                <p>${description}</p>
+                <div class="button-container">
+                    <button onclick="closePopup(true)">Batal</button>
+                    <button onclick="closePopup()">Lanjutkan</button>
+                </div>
+            `;
+            document.body.appendChild(popup);
+            popup.style.display = 'block';
+        }
+
+        function closePopup(cancel = false) {
+            const popup = document.querySelector('.popup');
+            if (popup) {
+                popup.style.display = 'none';
+                popup.remove(); // Menghapus elemen pop-up dari DOM
+                if (!cancel) {
+                    // Jika "Lanjutkan" dipilih, arahkan ke URL
+                    window.location.href = 'https://example.com/recommendations';
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
