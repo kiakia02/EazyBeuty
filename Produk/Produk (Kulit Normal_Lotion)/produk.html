@@ -122,7 +122,6 @@ section{
 .img-area:hover .overlay {
     opacity: 1; 
 }
-
 .overlay {
     position: absolute;
     top: 0;
@@ -151,6 +150,9 @@ section{
     gap: 30px;
     flex-wrap: wrap;
 }
+.content{
+    display: flex;
+}
 .bgimg{
     background-color: #ffe9e9;
 }
@@ -162,7 +164,7 @@ section{
         flex-wrap: wrap;
     }
     .sidebar {
-        width: 200px;
+        width: 250px;
         background-color: #f7f7f7;
         padding: 20px;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -178,16 +180,30 @@ section{
     }
     .sidebar ul li {
         margin: 10px 0;
+        font-size: 14px;
+        color: #8d0b0b;
+    }
+    .sidebar ul li:active{
+        color: #883737;
     }
     .sidebar ul li button {
         background: none;
         border: none;
-        font-size: 16px;
+        font-size: 15px;
         cursor: pointer;
         display: flex;
         justify-content: space-between;
         width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
     }
+    .arrow-down {
+            display: inline-block;
+            width: 0; 
+            height: 0; 
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 7px solid black;
+        }
     .container {
         flex-grow: 1;
         padding: 20px;
@@ -197,7 +213,7 @@ section{
         justify-content: center;
     }
     .product {
-        width: 22%;
+        width: 21%;
         border: 1px solid #ddd;
         border-radius: 5px;
         padding: 10px;
@@ -274,15 +290,19 @@ section{
             <h2>SkinCare</h2>
             <ul>
                 <li>
-                    <button>Cleanser <span>&#9660;</span></button>
+                    <button>Cleanser 
+                        <span class="arrow-down"></span>
+                    </button>
                     <ul>
-                        <li><a href="#">Gel Cleanser</a></li>
-                        <li><a href="#">Foam Cleanser</a></li>
-                        <li><a href="#">Oil Cleanser</a></li>
+                        <li><a href="#">Toner</a></li>
+                        <li><a href="#">Lotion & Emulsion</a></li>
+                        <li><a href="#">Sleeping Mask</a></li>
+                        <li><a href="#">Sunsreen</a></li>
+                        <li><a href="#">Sunscreen</a></li>
                     </ul>
                 </li>
                 <li>
-                    <button>Treatment <span>&#9660;</span></button>
+                    <button>Treatment <span class="arrow-down"></span></button>
                     <ul>
                         <li><a href="#">Serum</a></li>
                         <li><a href="#">Toner</a></li>
@@ -290,7 +310,8 @@ section{
                     </ul>
                 </li>
                 <li>
-                    <button>Mask <span>&#9660;</span></button>
+                    <button>Mask <span class="arrow-down"></span>
+                    </button>
                     <ul>
                         <li><a href="#">Sheet Mask</a></li>
                         <li><a href="#">Clay Mask</a></li>
@@ -298,7 +319,8 @@ section{
                     </ul>
                 </li>
                 <li>
-                    <button>Moisturizer <span>&#9660;</span></button>
+                    <button>Moisturizer <span class="arrow-down"></span>
+                    </button>
                     <ul>
                         <li><a href="#">Gel Moisturizer</a></li>
                         <li><a href="#">Cream Moisturizer</a></li>
@@ -310,104 +332,104 @@ section{
     <div class="container">
         <!-- Generate 20 product divs -->
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 1">
-            <h3>Product 1</h3>
-            <p>Description of Product 1</p>
+            <img src="Aset produk kulit normal foto/lotion/1.png">
+            <h3>Emina</h3>
+            <p>Sun Protection SPF 30 PA+++</p>
         </div>
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 2">
-            <h3>Product 2</h3>
-            <p>Description of Product 2</p>
+            <img src="Aset produk kulit normal foto/lotion/2.png" alt="Product 2">
+            <h3>Azarine Cosmetic</h3>
+            <p>Hydrasoothe Sunscreen Gel SPF 45+++</p>
         </div>
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 3">
-            <h3>Product 3</h3>
-            <p>Description of Product 3</p>
+            <img src="Aset produk kulit normal foto/lotion/3.png" alt="Product 3">
+            <h3>Skin Aqua</h3>
+            <p>UV Moisture Milk</p>
         </div>
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 4">
-            <h3>Product 4</h3>
-            <p>Description of Product 4</p>
+            <img src="Aset produk kulit normal foto/lotion/4.png" alt="Product 4">
+            <h3>Wardah</h3>
+            <p>UV Shield Essential Sunscreen Gel SPF</p>
         </div>
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 5">
-            <h3>Product 5</h3>
-            <p>Description of Product 5</p>
+            <img src="Aset produk kulit normal foto/lotion/5.png" alt="Product 5">
+            <h3>Biore</h3>
+            <p>UV Aqua Rich Watery Essence SPF 50+ PA++++</p>
         </div>
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 6">
-            <h3>Product 6</h3>
-            <p>Description of Product 6</p>
+            <img src="Aset produk kulit normal foto/lotion/6.png" alt="Product 6">
+            <h3>NPURE</h3>
+            <p>Cica Beat The Sun</p>
         </div>
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 7">
-            <h3>Product 7</h3>
-            <p>Description of Product 7</p>
+            <img src="Aset produk kulit normal foto/lotion/7.png" alt="Product 7">
+            <h3>Skin Aqua</h3>
+            <p>UV Moisture Gel</p>
         </div>
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 8">
-            <h3>Product 8</h3>
-            <p>Description of Product 8</p>
+            <img src="Aset produk kulit normal foto/lotion/8.png" alt="Product 8">
+            <h3>L'Oreal Paris</h3>
+            <p>UV Perfect Matte & Fresh Long UV SPF</p>
         </div>
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 9">
-            <h3>Product 9</h3>
-            <p>Description of Product 9</p>
+            <img src="Aset produk kulit normal foto/lotion/9.png" alt="Product 9">
+            <h3>Nivea</h3>
+            <p>Sun Protect & White Oil Control Serum SPF 50+</p>
         </div>
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 10">
-            <h3>Product 10</h3>
-            <p>Description of Product 10</p>
+            <img src="Aset produk kulit normal foto/lotion/10.png" alt="Product 10">
+            <h3>Carasun</h3>
+            <p>Solar Smart UV Protector SPF45 PA++++</p>
         </div>
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 11">
-            <h3>Product 11</h3>
-            <p>Description of Product 11</p>
+            <img src="Aset produk kulit normal foto/lotion/11.png" alt="Product 11">
+            <h3>L'Oreal Paris</h3>
+            <p>UV Defender Bright & Clear</p>
         </div>
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 12">
-            <h3>Product 12</h3>
-            <p>Description of Product 12</p>
+            <img src="Aset produk kulit normal foto/lotion/12.png" alt="Product 12">
+            <h3>Acnes </h3>
+            <p>UV Tint</p>
         </div>
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 13">
-            <h3>Product 13</h3>
-            <p>Description of Product 13</p>
+            <img src="Aset produk kulit normal foto/lotion/13.png" alt="Product 13">
+            <h3>Wardah</h3>
+            <p>UV Shield Airy Smooth Sunscreen Serum SPF 50 PA++++</p>
         </div>
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 14">
-            <h3>Product 14</h3>
-            <p>Description of Product 14</p>
+            <img src="Aset produk kulit normal foto/lotion/14.png" alt="Product 14">
+            <h3>Skin Aqua</h3>
+            <p>UV Whitening Milk</p>
         </div>
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 15">
-            <h3>Product 15</h3>
-            <p>Description of Product 15</p>
+            <img src="Aset produk kulit normal foto/lotion/15.png" alt="Product 15">
+            <h3>Azarine Cosmetic</h3>
+            <p>Hydramax-C Sunscreen Serum SPF 50 PA++++</p>
         </div>
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 16">
-            <h3>Product 16</h3>
-            <p>Description of Product 16</p>
+            <img src="Aset produk kulit normal foto/lotion/16.png" alt="Product 16">
+            <h3>Nivea</h3>
+            <p>Sun Protect & White Serum Instant Aura SPF 50+</p>
         </div>
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 17">
-            <h3>Product 17</h3>
-            <p>Description of Product 17</p>
+            <img src="Aset produk kulit normal foto/lotion/17.png" alt="Product 17">
+            <h3>Corsx</h3>
+            <p>Aloe Soothing Sun Cream</p>
         </div>
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 18">
-            <h3>Product 18</h3>
-            <p>Description of Product 18</p>
+            <img src="Aset produk kulit normal foto/lotion/18.png" alt="Product 18">
+            <h3>Garnier</h3>
+            <p>Light Complete Super UV Spot Proof Watery Sunscreen</p>
         </div>
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 19">
-            <h3>Product 19</h3>
-            <p>Description of Product 19</p>
+            <img src="Aset produk kulit normal foto/lotion/19.png" alt="Product 19">
+            <h3>Skin Aqua</h3>
+            <p>UV Mild Milk</p>
         </div>
         <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Product 20">
-            <h3>Product 20</h3>
-            <p>Description of Product 20</p>
+            <img src="Aset produk kulit normal foto/lotion/20.png" alt="Product 20">
+            <h3>Emina</h3>
+            <p>Sun Battle SPF 30 PA +++</p>
         </div>
     </div>
     <script>
